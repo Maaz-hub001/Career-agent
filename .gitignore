@@ -1,0 +1,18 @@
+#ENVIRNMENT VARIABLES
+.env
+
+#PYTHON VIRTUAL ENVIRNMENT
+.venv/
+
+#PYTHON CACHE
+__pycache__/
+*.pyc
+
+#VS CODE SETTINGS
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
