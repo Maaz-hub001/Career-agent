@@ -12,14 +12,14 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 #open_AI
-    OPENAI_API_KEY: str 
+    OPENAI_API_KEY: str =""
 # supabase
-    SUPABASE_URL: str
-    SUPABASE_KEY: str 
+    SUPABASE_URL: str =""
+    SUPABASE_KEY: str =""
 
 #SEARCH
-    TAVILY_API_KEY: str 
-    FIRECRAWL_API_KEY: str
+    TAVILY_API_KEY: str =""
+    FIRECRAWL_API_KEY: str =""
 
 settings: Settings = Settings()
 
