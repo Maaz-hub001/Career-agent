@@ -7,17 +7,20 @@ class SearchService:
         self.client = TavilyClient(api_key=settings.TAVILY_API_KEY)
         
 
-    def search(self, query:str):
+    def search(self, query:str)-> list[SearchResult]:
+        if not query.strip():
+            return []
         response = self.client.search(query) 
         
         results = []
         for item in response['results']:
             search_result = SearchResult(
-                title=item["title"],
-                url=item["url"],
-                snippet=item["content"]
+                title=item.get("title", ""),
+                url=item.get("url", ""),
+                snippet=item.get("content", "")
             )
 
             
             results.append(search_result)
         return  results
+    
