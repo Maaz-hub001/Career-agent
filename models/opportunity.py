@@ -5,13 +5,13 @@ from uuid import UUID
 class Opportunity(BaseModel):
     id : UUID | None = None
     title : str
-    location : str
+    location : str | None = None
     description : str
     created_at : datetime | None = None
     source : str
     opportunity_type : str
     status : str
-    contact : str
+    contact : str | None = None
 
 
 
